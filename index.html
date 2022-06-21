@@ -1,12 +1,164 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="utf-8">
-    <title>HTML Academy: {{projectTitle}}</title>
-  </head>
-  <body>
 
-    <p>Репозиторий создан для обучения на профессиональном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/htmlcss">HTML и CSS. Профессиональная вёрстка сайтов</a>».</p>
+<head>
+  <meta charset="utf-8">
+  <title>Интернет-магазин "NЁRDS"</title>
+</head>
 
-  </body>
+<body>
+  <header>
+    <nav>
+      <a>
+        <img src="/img/nerds-logo.svg" alt="Логотип NЁRDS">
+      </a>
+
+      <ul>
+        <li><a href="/blank.html">Студия</a></li>
+        <li><a href="/blank.html">Клиенты</a></li>
+        <li><a href="/catalog.html">Магазин</a></li>
+        <li><a href="/blank.html">Контакты</a></li>
+      </ul>
+
+      <a href="/blank.html">Корзина</a>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Интернет-магазин "NЁRDS"</h1>
+
+    <section>
+      <h2>Рекламный слайдер</h2>
+      <ul>
+        <li><input type="radio" name="slider" id="slider-long" checked>
+          <label for="slider-long">Долго, дорого, скрупулезно.</label>
+          <p>Долго, дорого, скрупулезно.</p>
+          <p>Математически выверенный дизайн для вашего сайта или мобильного приложения.</p>
+          <a href="/blank.html">Узнать больше</a>
+          <!-- <img src="/img/nerds-index-slide1 1.png" alt=""> -->
+        </li>
+
+        <li><input type="radio" name="slider" id="slider-love">
+          <label for="slider-love">Любим математику как никто другой</label>
+          <p>Любим математику как никто другой</p>
+          <p>Никакого креатива, только математические формулы для расчета идеальных пропорций</p>
+          <a href="/blank.html">Узнать больше</a>
+          <!-- <img src="/img/nerds-index-slide2 1.png" alt=""> -->
+        </li>
+
+        <li><input type="radio" name="slider" id="slider-only">
+          <label for="slider-only">Только ночь, только хардкор</label>
+          <p>Только ночь, только хардкор</p>
+          <p>Работать днем, как все? Мы против этого.
+            Ближе к полуночи работа только начинается.</p>
+          <a href="/blank.html">Узнать больше</a>
+          <!-- <img src="/img/nerds-index-slide3 1.png" alt=""> -->
+        </li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Услуги</h2>
+      <ul>
+        <li>
+          <a href="/blank.html">
+            <h3>Веб-сайты</h3>
+            <p>Мир никогда не будет прежним после того как увидит ваш сайт!</p>
+            Заказать
+          </a>
+        </li>
+
+        <li>
+          <a href="/blank.html">
+            <h3>Приложения</h3>
+            <p>Покорите топ-10 приложений в AppStore и Google Play</p>
+            Заказать
+          </a>
+        </li>
+
+        <li>
+          <a href="/blank.html">
+            <h3>Презентации</h3>
+            <p>Вы даже не подозреваете, насколько вы изумительны!</p>
+            Заказать
+          </a>
+        </li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>О студии</h2>
+
+      <p>Мы — маленькая, но гордая дизайн-студия из Краснодара.</p>
+      <p>Исповедуем принципы минимализма и чистоты. Ставим математический расчет превыше креатива. Работаем не покладая
+        рук, как роботы.</p>
+
+      <h4>Выполняем заказы на разработку:</h4>
+
+      <ul>
+        <li>Веб-сайтов любой сложности</li>
+        <li>Мобильных приложений для iOS и Android</li>
+        <li>Слайдшоу и видео для корпоративных презентаций</li>
+      </ul>
+
+      <table>
+        <caption>с 2004 года Любим точность во всем:</caption>
+
+        <tr>
+          <th>Уровень самоотдачи</th>
+          <th>Соблюдение сроков</th>
+          <th>Минимальная предоплата</th>
+        </tr>
+
+        <tr>
+          <td>146<span>%</span></td>
+          <td>100<span>%</span></td>
+          <td>50<span>%</span></td>
+        </tr>
+      </table>
+    </section>
+
+    <section>
+      <h2>Наши клиенты</h2>
+      <ul>
+        <li><a href="#">HTML Academy</a></li>
+        <li><a href="#">Borodinski</a></li>
+        <li><a href="#">Pink</a></li>
+        <li><a href="#">Mishka</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <section>
+      <h2>Контакты</h2>
+      <p>NЁRDS DESIGN STUDIO</p>
+      <p>наб. Реки Карповки, 5 лит П, Санкт-Петербург<br>
+        <a href="tel:+78005558628">+7 800 555-86-28</a>
+      </p>
+      <button>Напишите нам</button>
+    </section>
+
+    <section>
+      <h2>Давайте дружить, это выгодно!</h2>
+      <p>Скидка 10% для друзей из социальных сетей.</p>
+      <ul>
+        <li>
+          <a href="#">Вконтакте</a>
+        </li>
+        <li>
+          <a href="#">Фейсбук</a>
+        </li>
+        <li>
+          <a href="#">Инстаграм</a>
+        </li>
+      </ul>
+    </section>
+  </footer>
+
+  <section>
+    <h2>Напишите нам</h2>
+  </section>
+</body>
+
 </html>
