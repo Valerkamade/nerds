@@ -11,6 +11,7 @@
   --special-red: #fb565a;
   --special-green: #00ca74;
   --special-yellow: #efc849;
+  --special-red_hover: #E74246;
 }
 
 /* Global */
@@ -119,7 +120,7 @@ img {
 .button:hover,
 .button:focus,
 .button:active {
-  background-color: var(--special);
+  background-color: var(--special-red_hover);
 }
 
 .button.disabled,
@@ -175,4 +176,37 @@ img {
   background-color: var(--special-yellow);
 }
 
+.index-columns {
+  color: var(--basic-black);
+
+}
+
+.index-columns .titel {
+  font-size: 45px;
+  line-height: 45px;
+  width: 500;
+}
+
 /* About us */
+
+.about-servises-list {
+  list-style: url("../img/icon/rect-list-style.svg");
+}
+
+/* Contacts */
+
+.contacts-phone {
+  color: inherit;
+}
+
+/* Write-us */
+
+.write-us-item input {
+  font: inherit;
+  background-color: transparent;
+  border: 2px solid var(--basic-black);
+}
+
+.write-us-item input:focus {
+  border-color: var(--special);
+}
