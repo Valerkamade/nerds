@@ -3,6 +3,8 @@
 
 <head>
   <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Интернет-магазин "Nёrd's"</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,19 +20,21 @@
 <body class="page-body">
   <header class="main-header">
     <nav class="main-navigation">
-      <a class="main-header__logo">
-        <img src="img/logo/nerds.svg" alt="Логотип nёrd's" width="160" height="65">
-      </a>
+      <div class="main-navigation-wrapper">
+        <a class="main-header__logo">
+          <img src="img/logo/nerds.svg" alt="Логотип nёrd's" width="160" height="65">
+        </a>
 
-      <ul class="site-navigation">
-        <li><a href="blank.html">Студия</a></li>
-        <li><a href="blank.html">Клиенты</a></li>
-        <li><a href="catalog.html">Магазин</a></li>
-        <li><a href="blank.html">Контакты</a></li>
-      </ul>
+        <ul class="site-navigation">
+          <li><a href="blank.html">Студия</a></li>
+          <li><a href="blank.html">Клиенты</a></li>
+          <li><a href="catalog.html">Магазин</a></li>
+          <li><a href="blank.html">Контакты</a></li>
+        </ul>
 
-      <div class="user-navigation">
-        <a class="basket-link" href="blank.html">Корзина</a>
+        <div class="user-navigation">
+          <a class="basket-link" href="blank.html">Корзина</a>
+        </div>
       </div>
     </nav>
   </header>
@@ -50,7 +54,7 @@
           <a class="button" href="blank.html">Узнать больше</a>
         </li>
 
-        <li class="slider__item slider__item-love">
+        <!-- <li class="slider__item slider__item-love">
           <input type="radio" name="slider" id="slider-love">
           <label for="slider-love">Любим математику как никто другой</label>
           <p class="titel">Любим математику как никто другой</p>
@@ -66,7 +70,7 @@
           <p>Работать днем, как все? Мы против этого.<br>
             Ближе к полуночи работа только начинается.</p>
           <a class="button" href="blank.html">Узнать больше</a>
-        </li>
+        </li> -->
       </ul>
     </section>
 
@@ -183,26 +187,30 @@
   </main>
 
   <footer class="main-footer">
-    <section class="footer-social">
-      <h2>Социальные сети</h2>
+    <div class="container">
+      <section class="footer-social">
+        <h2>Социальные сети</h2>
+        <div class="footer-grid">
+          <ul class="footer-social__list">
+            <li class="footer-social__item">
+              <a class="social-button vk" href="#">Вконтакте</a>
+            </li>
 
-      <ul class="footer-social__list">
-        <li class="footer-social__item">
-          <a class="social-button vk" href="#">Вконтакте</a>
-        </li>
+            <li class="footer-social__item">
+              <a class="social-button fb" href="#">Фейсбук</a>
+            </li>
 
-        <li class="footer-social__item">
-          <a class="social-button fb" href="#">Фейсбук</a>
-        </li>
-
-        <li class="footer-social__item">
-          <a class="social-button insta" href="#">Инстаграм</a>
-        </li>
-      </ul>
-
-      <p>Давайте дружить, это выгодно!</p>
-      <p>Скидка 10% для друзей из социальных сетей.</p>
-    </section>
+            <li class="footer-social__item">
+              <a class="social-button insta" href="#">Инстаграм</a>
+            </li>
+          </ul>
+          <div class="sale">
+            <p>Давайте дружить, это выгодно!</p>
+            <p>Скидка 10% для друзей из социальных сетей.</p>
+          </div>
+        </div>
+      </section>
+    </div>
   </footer>
 
   <section class="modal">
