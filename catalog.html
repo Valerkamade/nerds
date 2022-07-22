@@ -38,20 +38,22 @@
   </header>
 
   <main>
-    <h1 class="page-title">Магазин готовых шаблонов</h1>
+    <div class="title-wrapper">
+      <h1 class="page-title container">Магазин готовых шаблонов</h1>
+    </div>
     <div class="page-catalog container">
       <section class="filters">
-        <h2>Фильтр дизайнов</h2>
+        <h2 class="hidden">Фильтр дизайнов</h2>
         <form class="filter" method="get" action="https://echo.htmlacademy.ru">
-          <fieldset>
-            <legend>Стоимость:</legend>
+          <fieldset class="no-border">
+            <legend class="filter-titel">Стоимость:</legend>
 
             <input type="range" name="priceslider-min" id="filter-priceslider-min" min="0" max="150000" value="0"
               data-show-value="true">
             <label for="filter-priceslider-min">Минимальное значение</label>
-            <input type="range" name="fpriceslider-max" id="filter-priceslider-max" min="0" max="150000" value="100000"
+            <!-- <input type="range" name="fpriceslider-max" id="filter-priceslider-max" min="0" max="150000" value="100000"
               data-show-value="true">
-            <label for="filter-priceslider-max">Максимальное значение</label>
+            <label for="filter-priceslider-max">Максимальное значение</label> -->
 
             <ul>
               <li>
@@ -65,8 +67,8 @@
             </ul>
           </fieldset>
 
-          <fieldset>
-            <legend>Сетка:</legend>
+          <fieldset class="no-border">
+            <legend class="filter-titel">Сетка:</legend>
             <ul>
               <li class="filter-option filter-radio">
                 <input class="filter__input-radio filter__input" type="radio" name="grid" value="adaptive"
@@ -92,8 +94,8 @@
             </ul>
           </fieldset>
 
-          <fieldset>
-            <legend>Особенности:</legend>
+          <fieldset class="no-border">
+            <legend class="filter-titel">Особенности:</legend>
             <ul>
               <li class="filter-option filter-checkbox">
                 <input class="filter__input-checkbox filter__input" type="checkbox" name="slider" id="filter-slider"
@@ -131,13 +133,14 @@
               </li>
             </ul>
           </fieldset>
-          <button type="submit">Показать</button>
+          <button class="button" type="submit">Показать</button>
         </form>
       </section>
+
       <div class="products">
         <section class="sorting">
-          <h2>Сортировка дизайнов</h2>
-          <p>Сортировать:</p>
+          <h2 class="hidden">Сортировка дизайнов</h2>
+          <p class="filter-titel">Сортировать:</p>
           <ul class="sorting__list">
             <li><a class="sorting__item" href="#">По цене</a></li>
             <li><a class="sorting__item" href="#">По типу</a></li>
@@ -148,7 +151,7 @@
         </section>
 
         <section class="catalog">
-          <h2>Дизайны</h2>
+          <h2 class="hidden">Дизайны</h2>
 
           <ul class="catalog__list">
             <li class="catalog__item">
@@ -228,7 +231,7 @@
             <li><a class="pagination__item pagination__item-current">1</a> </li>
             <li><a class="pagination__item" href="#">2</a></li>
             <li><a class="pagination__item" href="#">3</a></li>
-            <li><a class="pagination__item" href="#">Следующая</a></li>
+            <li><a class="pagination__item next" href="#">Следующая</a></li>
           </ul>
         </section>
       </div>
@@ -267,7 +270,7 @@
             </li>
           </ul>
           <div class="sale">
-            <p>Давайте дружить, это выгодно!</p>
+            <p class="title">Давайте дружить, это выгодно!</p>
             <p>Скидка 10% для друзей из социальных сетей.</p>
           </div>
         </div>
@@ -275,7 +278,7 @@
     </div>
   </footer>
 
-  <section class="modal">
+  <section class="modal container">
     <h2>Напишите нам</h2>
 
     <form class="write-us__form" action="https://echo.htmlacademy.ru" method="post">
