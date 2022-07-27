@@ -4,6 +4,7 @@
 *::before,
 *::after {
   box-sizing: border-box;
+  -moz-box-sizing: border-box;
 }
 
 :root {
@@ -230,7 +231,7 @@ img {
   /* background-position: 114px 537px; */
 }
 
-.slider__item > .titel {
+.slider__item>.title {
   width: 538px;
   font-size: 55px;
   line-height: 55px;
@@ -309,6 +310,7 @@ img {
 .services__item p {
   color: var(--basic-extra-dark);
   margin: 0;
+  margin-bottom: 32px;
 }
 
 .services__item {
@@ -373,12 +375,14 @@ img {
   gap: 40px;
   padding-top: 39px;
   border-top: 2px solid var(--basic-extra-light);
+  margin-bottom: 73px;
 }
 
 .index-columns .title {
   font-size: 45px;
   line-height: 45px;
   font-weight: 500;
+  margin: 34px 0 32px;
 }
 
 /* About us */
@@ -387,37 +391,75 @@ img {
   color: var(--basic-extra-dark);
 }
 
+.about-us p {
+  margin: 0;
+  margin-bottom: 40px;
+}
+
 h4 {
   font-weight: 700;
   font-size: 16px;
   line-height: 24px;
   text-transform: uppercase;
+  margin: 0;
+  margin-bottom: 23px;
   /* color: var(--basic-black); */
 }
 
 .about-servises__list {
   list-style: outside url("../img/icon/rect-list-style.svg");
+  margin: 0;
+  /* list-style: none; */
 }
 
-/* .statistics__list {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+.about-servises__item {
+  margin: 0;
+  margin-bottom: 24px;
+}
+
+.about-servises__item:last-child {
+  margin-bottom: 0;
+}
+
+.statistics__list {
+  display: flex;
   width: 360px;
-} */
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0;
+}
+
+.statistics__table {
+  display: flex;
+  flex-direction: column;
+}
 
 .statistics {
   background: url("../img/content/nerds-illustration.png") no-repeat;
+}
+
+.statistics h4 {
+  text-align: center;
+  padding-top: 245px;
+  margin-bottom: 31px;
 }
 
 .statistics__term {
   font-weight: 700;
   font-size: 45px;
   line-height: 64px;
+  margin-bottom: 10px;
+}
+
+.statistics__term sup {
+  font-size: 26px;
 }
 
 .statistics__definition {
   line-height: 18px;
   color: var(--basic-extra-dark);
+  margin: 0;
+  padding: 0;
 }
 
 /* Customers */
@@ -426,7 +468,6 @@ h4 {
   list-style: none;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-
   gap: 40px;
   margin: 0;
   padding: 0;
@@ -461,19 +502,33 @@ h4 {
 /* Contacts */
 
 .contacts {
+  display: flex;
   color: var(--basic-grey);
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 49px 50px 47px;
+  justify-content: center;
+  max-width: 319px;
+  background-color: var(--basic-white);
 }
 
 .contacts p {
   line-height: 18px;
+  margin: 0;
+
 }
 
-.contacts .titel {
+.contacts .title {
   color: var(--basic-black);
   text-transform: uppercase;
   font-weight: 700;
   font-size: 18px;
   line-height: 30px;
+  margin-bottom: 23px;
+}
+
+.contacts .address {
+  margin-bottom: 16px;
 }
 
 .contacts__phone {
@@ -482,6 +537,7 @@ h4 {
 
 .contacts .button {
   padding: 17px 45px 15px 44px;
+  margin-top: 37px;
 }
 
 /* Inner page */
@@ -500,7 +556,7 @@ h4 {
   margin-right: 100px;
 }
 
-.filter-titel {
+.filter-title {
   font-weight: 700;
   font-size: 18px;
   line-height: 30px;
@@ -519,13 +575,13 @@ h4 {
   opacity: 40%;
 }
 
-.filter__input-checkbox:hover + label,
-.filter__input-checkbox:focus + label {
+.filter__input-checkbox:hover+label,
+.filter__input-checkbox:focus+label {
   opacity: 100%;
 }
 
-.filter__input-radio:hover + label,
-.filter__input-radio:focus + label {
+.filter__input-radio:hover+label,
+.filter__input-radio:focus+label {
   opacity: 100%;
 }
 
@@ -698,10 +754,17 @@ h4 {
   /* opacity: 20%; */
 }
 
+.sale p {
+  margin: 0;
+  padding: 0;
+}
+
 .sale .title {
   font-weight: 700;
   font-size: 36px;
   line-height: 36px;
+  margin-top: 7px;
+  margin-bottom: 10px;
 }
 
 /* Write-us */
@@ -746,7 +809,6 @@ h4 {
 }
 
 .write-us__form .modal-close {
-  background: var(--accent-red) url("../img/icon/close-cross.svg") 50% 50%
-    no-repit;
+  background: var(--accent-red) url("../img/icon/close-cross.svg") 50% 50% no-repit;
   opacity: 30%;
 }
