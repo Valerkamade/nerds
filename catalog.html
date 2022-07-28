@@ -45,7 +45,7 @@
       <section class="filters">
         <h2 class="hidden">Фильтр дизайнов</h2>
         <form class="filter" method="get" action="https://echo.htmlacademy.ru">
-          <fieldset class="no-border">
+          <fieldset>
             <legend class="filter-title">Стоимость:</legend>
 
             <input type="range" name="priceslider-min" id="filter-priceslider-min" min="0" max="150000" value="0"
@@ -67,7 +67,7 @@
             </ul>
           </fieldset>
 
-          <fieldset class="no-border">
+          <fieldset>
             <legend class="filter-title">Сетка:</legend>
             <ul>
               <li class="filter-option filter-radio">
@@ -94,7 +94,7 @@
             </ul>
           </fieldset>
 
-          <fieldset class="no-border">
+          <fieldset>
             <legend class="filter-title">Особенности:</legend>
             <ul>
               <li class="filter-option filter-checkbox">
@@ -158,95 +158,117 @@
               <p class="catalog__item-image">
                 <img src="img/products/sedona.png" alt="Sedona" width="358" height="578">
               </p>
-              <a href="blank.html">
-                <h3><span class="catalog__item-title">Sedona</span></h3>
-              </a>
-              Информационный сайт<br>
-              для туристов
-              <button class="button button-catalog" type="button">9 900 ₽</button>
+
+              <div class="catalog__item-info hidden">
+                <a href="blank.html">
+                  <h3><span class="catalog__item-title">Sedona</span></h3>
+                </a>
+                Информационный сайт<br>
+                для туристов
+                <button class="button button-catalog" type="button">9 900 ₽</button>
+              </div>
             </li>
 
             <li class="catalog__item">
               <p class="catalog__item-image">
                 <img src="img/products/pink.png" alt="Pink app" width="358" height="578">
               </p>
-              <a href="blank.html">
-                <h3><span class="catalog__item-title"></span>Pink app</h3>
-              </a>
-              Продуктовый лендинг<br>
-              приложения для iOS и Android
-              <button class="button button-catalog" type="button">9 900 ₽</button>
+
+              <div class="catalog__item-info hidden">
+                <a href="blank.html">
+                  <h3><span class="catalog__item-title"></span>Pink app</h3>
+                </a>
+                Продуктовый лендинг<br>
+                приложения для iOS и Android
+                <button class="button button-catalog" type="button">9 900 ₽</button>
+              </div>
             </li>
 
             <li class="catalog__item">
               <p class="catalog__item-image">
                 <img src="img/products/barbershop.png" alt="Barbershop" width="358" height="578">
               </p>
-              <a href="blank.html">
-                <h3><span class="catalog__item-title">Barbershop</span></h3>
-              </a>
-              Сайт салона красоты.<br>
-              Для мужчин, да.
-              <button class="button button-catalog" type="button">9 900 ₽</button>
+
+              <div class="catalog__item-info hidden">
+                <a href="blank.html">
+                  <h3><span class="catalog__item-title">Barbershop</span></h3>
+                </a>
+                Сайт салона красоты.<br>
+                Для мужчин, да.
+                <button class="button button-catalog" type="button">9 900 ₽</button>
+              </div>
             </li>
 
             <li class="catalog__item">
               <p class="catalog__item-image">
                 <img src="img/products/mishka.png" alt="Mishka" width="358" height="578">
               </p>
-              <a href="blank.html">
-                <h3><span class="catalog__item-title">Mishka</span></h3>
-              </a>
-              Интернет-магазин<br>
-              вязаных игрушек
-              <button class="button button-catalog" type="button">9 900 ₽</button>
+
+              <div class="catalog__item-info hidden">
+                <a href="blank.html">
+                  <h3><span class="catalog__item-title">Mishka</span></h3>
+                </a>
+                Интернет-магазин<br>
+                вязаных игрушек
+                <button class="button button-catalog" type="button">9 900 ₽</button>
+              </div>
             </li>
 
             <li class="catalog__item">
               <p class="catalog__item-image">
                 <img src="img/products/a-plus.png" alt="A plus" width="358" height="578">
               </p>
-              <a href="blank.html">
-                <h3><span class="catalog__item-title">A plus</span></h3>
-              </a>
-              Лендинг курсов повышения<br>
-              квалификации
-              <button class="button button-catalog" type="button">9 900 ₽</button>
+
+              <div class="catalog__item-info hidden">
+                <a href="blank.html">
+                  <h3><span class="catalog__item-title">A plus</span></h3>
+                </a>
+                Лендинг курсов повышения<br>
+                квалификации
+                <button class="button button-catalog" type="button">9 900 ₽</button>
+              </div>
             </li>
 
             <li class="catalog__item">
               <p class="catalog__item-image">
                 <img src="img/products/kvast.png" alt="Kvas" width="358" height="578">
               </p>
-              <a href="blank.html">
-                <h3><span class="catalog__item-title">Кваст</span></h3>
-              </a>
-              Промо-сайт производителя<br>
-              крафтового кваса
-              <button class="button button-catalog" type="button">9 900 ₽</button>
+
+              <div class="catalog__item-info hidden">
+                <a href="blank.html">
+                  <h3><span class="catalog__item-title">Кваст</span></h3>
+                </a>
+                Промо-сайт производителя<br>
+                крафтового кваса
+                <button class="button button-catalog" type="button">9 900 ₽</button>
+              </div>
             </li>
           </ul>
 
           <ul class="pagination__list">
-            <li><a class="pagination__item pagination__item-current">1</a> </li>
-            <li><a class="pagination__item" href="#">2</a></li>
-            <li><a class="pagination__item" href="#">3</a></li>
-            <li><a class="pagination__item next" href="#">Следующая</a></li>
+            <li class="pagination__item pagination__item-current"><a>1</a> </li>
+            <li class="pagination__item"><a href="#">2</a></li>
+            <li class="pagination__item"><a href="#">3</a></li>
+            <li class="pagination__item next"><a href="#">Следующая</a></li>
           </ul>
         </section>
       </div>
 
-      <section>
-        <h2>Контакты</h2>
-        <p>NЁRDS DESIGN STUDIO</p>
-        <p>наб. Реки Карповки,<br>
-          5 лит П, Санкт-Петербург<br>
-          <a href="tel:+78005558628">+7 800 555-86-28</a>
+      <section class="contacts container">
+        <h2 class="hidden">Контакты</h2>
+        <p class="title">Nёrds design studio</p>
+        <p class="address">наб. Реки Карповки,<br>
+          5 лит П, Санкт-Петербург
         </p>
-        <a href="#">Напишите нам</a>
+
+        <p>
+          <a class="contacts__phone" href="tel:+78005558628">+7 800 555-86-28</a>
+        </p>
+        <a class="button" href="#">Напишите нам</a>
+
         <!-- <img src="img/content/map-marker.png" alt="Маркер адреса на карте" width="231" height="190">
-      <img src="img/content/map.png" alt="Карта, NЁRDS DESIGN STUDIOнаб. Реки Карповки, 5 лит П, Санкт-Петербург"
-        width="1440" height="416"> -->
+        <img src="img/content/map.png" alt="Карта, NЁRDS DESIGN STUDIOнаб. Реки Карповки, 5 лит П, Санкт-Петербург"
+          width="1440" height="416"> -->
       </section>
     </div>
   </main>
