@@ -100,7 +100,7 @@ img {
 
 .main-navigation-wrapper {
   display: grid;
-  grid-template-columns: 160px 800px 160px;
+  grid-template-columns: 160px 1fr 160px;
   column-gap: 40px;
   width: 1160px;
   margin: 0 auto;
@@ -222,10 +222,19 @@ img {
 }
 
 .slider__item {
-  /* text-align: center; */
+  display: flex;
+  flex-direction: column;
   background-repeat: no-repeat;
   background-color: var(--basic-extra-light);
-  /* background-position: 114px 537px; */
+  min-height: 431px;
+  align-items: flex-start;
+  /* padding-right: 400px; */
+  /* width: 760px; */
+}
+
+.slider__item p {
+  margin: 0;
+  padding: 0;
 }
 
 .slider__item>.title {
@@ -233,18 +242,23 @@ img {
   font-size: 55px;
   line-height: 55px;
   font-weight: 500;
+  margin-bottom: 25px;
+  margin-top: 78px;
 }
 
 .slider__item-long {
   background-image: url("../img/content/long_expensive.png");
+  background-position-x: right;
 }
 
 .slider__item-love {
   background-image: url("../img/content/love_math.png");
+  background-position-x: right;
 }
 
 .slider__item-only {
   background-image: url("../img/content/only_night.png");
+  background-position-x: right;
 }
 
 /* Button */
@@ -255,11 +269,10 @@ img {
   line-height: 18px;
   text-align: center;
   color: var(--basic-white);
-  /* vertical-align: 500; */
   text-transform: uppercase;
   background-color: var(--accent-red);
   border-radius: 3px;
-  padding: 17px 54px 15px 54px;
+  padding: 16px 54px;
   border: none;
 }
 
@@ -280,6 +293,11 @@ img {
   opacity: 0.5;
   background-color: var(--basic-black);
 } */
+
+.slider__item .button {
+  margin-top: 38px;
+  margin-bottom: 80px;
+}
 
 /* Services */
 .services {
@@ -317,6 +335,7 @@ img {
   margin-right: 60px;
   padding-top: 146px;
   min-height: 201px;
+  /* padding-right: 400px; */
 }
 
 .services__item-site {
@@ -472,6 +491,7 @@ h4 {
   border-top: 2px solid var(--basic-extra-light);
   border-bottom: 2px solid var(--basic-extra-light);
   align-items: center;
+  margin-bottom: 80px;
 }
 
 .customers__item a {
@@ -504,10 +524,11 @@ h4 {
   color: var(--basic-grey);
   flex-direction: column;
   align-items: flex-start;
-  padding: 49px 50px 47px;
+  padding: 50px;
   justify-content: center;
   max-width: 320px;
   background-color: var(--basic-white);
+  /* margin: 0; */
 }
 
 .contacts p {
@@ -538,6 +559,24 @@ h4 {
   margin-top: 37px;
 }
 
+.contacts__map {
+  background: url("../img/content/map.png") 50% 50% no-repeat;
+  height: 416px;
+  width: 100%;
+  margin-bottom: 58px;
+  padding-top: 54px;
+}
+
+/* .cantacts__marker {
+  background: url("../img/content/map-marker.png");
+  height: 190px;
+  width: 231px;
+  position: absolute;
+  left: 847px;
+  top: 70px;
+  z-index: 100;
+} */
+
 /* Inner page */
 
 .page-catalog {
@@ -562,11 +601,18 @@ h4 {
   border: none;
 }
 
-.filter fieldset:first-child {
+.filter__price {
   margin-bottom: 54px;
 }
 
-.filter fieldset:last-child {
+.filter__input-price {
+width: 205px;
+height: 80px;
+padding-left: 140px;
+background-color: var(--basic-extra-light);
+}
+
+.filter__peculiarties {
   margin-bottom: 48px;
 }
 
@@ -770,7 +816,7 @@ h4 {
   color: var(--black-30);
 }
 
-.pagination__item-current a {
+.pagination__list a:not([href]) {
   border: 3px solid var(--page-current);
   background-color: transparent;
 }

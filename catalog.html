@@ -45,12 +45,12 @@
       <section class="filters">
         <h2 class="hidden">Фильтр дизайнов</h2>
         <form class="filter" method="get" action="https://echo.htmlacademy.ru">
-          <fieldset>
+          <fieldset class="filter__price">
             <legend class="filter-title">Стоимость:</legend>
 
-            <input type="range" name="priceslider-min" id="filter-priceslider-min" min="0" max="150000" value="0"
+            <input class="filter__input-price" type="range" name="price-slider-min" id="filter-priceslider-min" min="0" max="150000" value="0"
               data-show-value="true">
-            <label for="filter-priceslider-min">Минимальное значение</label>
+            <label for="filter-priceslider-min"></label>
             <!-- <input type="range" name="fpriceslider-max" id="filter-priceslider-max" min="0" max="150000" value="100000"
               data-show-value="true">
             <label for="filter-priceslider-max">Максимальное значение</label> -->
@@ -67,7 +67,7 @@
             </ul>
           </fieldset>
 
-          <fieldset>
+          <fieldset class="filter__grid">
             <legend class="filter-title">Сетка:</legend>
             <ul>
               <li class="filter-option filter-radio">
@@ -94,7 +94,7 @@
             </ul>
           </fieldset>
 
-          <fieldset>
+          <fieldset class="filter__peculiarties">
             <legend class="filter-title">Особенности:</legend>
             <ul>
               <li class="filter-option filter-checkbox">
