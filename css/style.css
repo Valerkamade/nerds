@@ -18,6 +18,7 @@
 
   --grey-social: #e1e1e1;
   --grey-input: #444444;
+  --grey-control: #C1C1C1;
 
   --black-70: rgba(0, 0, 0, 0.7);
   --black-60: rgba(0, 0, 0, 0.6);
@@ -215,6 +216,7 @@ img {
 .main-slider {
   margin-bottom: 80px;
   display: grid;
+  position: relative;
 }
 
 .slider__list {
@@ -237,13 +239,14 @@ img {
   padding: 0;
 }
 
-.slider__item>.title {
+.slide__title {
   width: 538px;
   font-size: 55px;
   line-height: 55px;
   font-weight: 500;
   margin-bottom: 25px;
   margin-top: 78px;
+  color: var(--basic-black);
 }
 
 .slider__item-long {
@@ -259,6 +262,39 @@ img {
 .slider__item-only {
   background-image: url("../img/content/only_night.png");
   background-position-x: right;
+}
+
+.slide {
+  display: none;
+}
+
+.slide-current {
+  display: flex;
+}
+
+.slider-controls {
+  position: absolute;
+  bottom: 96px;
+  left: 50%;
+  z-index: 20;
+  display: flex;
+  width: 88px;
+  justify-content: space-between;
+}
+
+.slider-controls button {
+  padding: 0;
+  width: 18px;
+  height: 18px;
+  background-color: var(--basic-white);
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+}
+
+.slider-controls .current {
+  background-color: transparent;
+  border: 2px solid var(--grey-control);
 }
 
 /* Button */
@@ -534,7 +570,6 @@ h4 {
 .contacts p {
   line-height: 18px;
   margin: 0;
-
 }
 
 .contacts .title {
@@ -606,10 +641,10 @@ h4 {
 }
 
 .filter__input-price {
-width: 205px;
-height: 80px;
-padding-left: 140px;
-background-color: var(--basic-extra-light);
+  width: 205px;
+  height: 80px;
+  padding-left: 140px;
+  background-color: var(--basic-extra-light);
 }
 
 .filter__peculiarties {
@@ -646,13 +681,13 @@ background-color: var(--basic-extra-light);
   opacity: 40%;
 }
 
-.filter__input-checkbox:hover+label,
-.filter__input-checkbox:focus+label {
+.filter__input-checkbox:hover + label,
+.filter__input-checkbox:focus + label {
   opacity: 100%;
 }
 
-.filter__input-radio:hover+label,
-.filter__input-radio:focus+label {
+.filter__input-radio:hover + label,
+.filter__input-radio:focus + label {
   opacity: 100%;
 }
 
@@ -660,7 +695,6 @@ background-color: var(--basic-extra-light);
   background-color: var(--basic-extra-light);
   color: var(--basic-black);
   padding: 17px 89px 15px 88px;
-
 }
 
 .filter .button:hover {
@@ -731,7 +765,6 @@ background-color: var(--basic-extra-light);
 .catalog__item-image {
   height: 578px;
   width: 358px;
-
 }
 
 .catalog__item a {
@@ -846,7 +879,6 @@ background-color: var(--basic-extra-light);
   width: 81px;
   height: 81px;
   border-radius: 50%;
-
 }
 
 .footer-social__item .vk {
@@ -926,10 +958,10 @@ background-color: var(--basic-extra-light);
 }
 
 .write-us__form .modal-close {
-  background: var(--accent-red) url("../img/icon/close-cross.svg") 50% 50% no-repit;
+  background: var(--accent-red) url("../img/icon/close-cross.svg") 50% 50%
+    no-repit;
   opacity: 30%;
 }
-
 
 .hidden {
   display: none;

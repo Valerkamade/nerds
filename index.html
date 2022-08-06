@@ -48,31 +48,32 @@
       <section class="main-slider container">
         <h2 class="hidden">Рекламный слайдер</h2>
 
-        <div class="slider__item slider__item-long">
-          <input type="radio" name="slider" id="slider-long" checked>
-          <label for="slider-long">Долго, дорого, скрупулезно.</label>
-          <p class="title">Долго, дорого, скрупулезно.</p>
-          <p>Математически выверенный дизайн <br>
-            для вашего сайта или мобильного приложения.</p>
-          <a class="button" href="blank.html">Узнать больше</a>
-        </div>
+        <ul class="slider__list">
+          <li class="slider__item slider__item-long slide slide-current">
+            <h3 class="slide__title">Долго, дорого, скрупулезно.</h3>
+            <p>Математически выверенный дизайн <br>
+              для вашего сайта или мобильного приложения.</p>
+            <a class="button" href="blank.html">Узнать больше</a>
+          </li>
 
-        <div class="slider__item slider__item-love">
-          <input type="radio" name="slider" id="slider-love">
-          <label for="slider-love">Любим математику как никто другой</label>
-          <p class="title">Любим математику как никто другой</p>
-          <p>Никакого креатива, только математические формулы<br>
-            для расчета идеальных пропорций</p>
-          <a class="button" href="blank.html">Узнать больше</a>
-        </div>
+          <li class="slider__item slider__item-love slide">
+            <h3 class="slide__title">Любим математику как никто другой</h3>
+            <p>Никакого креатива, только математические формулы<br>
+              для расчета идеальных пропорций</p>
+            <a class="button" href="blank.html">Узнать больше</a>
+          </li>
 
-        <div class="slider__item slider__item-only">
-          <input type="radio" name="slider" id="slider-only">
-          <label for="slider-only">Только ночь,только хардкор</label>
-          <p class="title">Только ночь,<br>только хардкор</p>
-          <p>Работать днем, как все? Мы против этого.<br>
-            Ближе к полуночи работа только начинается.</p>
-          <a class="button" href="blank.html">Узнать больше</a>
+          <li class="slider__item slider__item-only slide">
+            <h3 class="slide__title">Только ночь,<br>только хардкор</h3>
+            <p>Работать днем, как все? Мы против этого.<br>
+              Ближе к полуночи работа только начинается.</p>
+            <a class="button" href="blank.html">Узнать больше</a>
+          </li>
+        </ul>
+        <div class="slider-controls">
+          <button type="button" aria-label="Первый слайд"></button>
+          <button type="button" aria-label="Второй слайд"></button>
+          <button class="current" type="button" aria-label="Третий слайд"></button>
         </div>
       </section>
     </div>
