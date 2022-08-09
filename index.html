@@ -42,11 +42,11 @@
 
   <main>
     <div class="title-wrapper">
-      <h1 class="page-title hidden">Интернет-магазин "nёrd's"</h1>
+      <h1 class="page-title visually-hidden">Интернет-магазин "nёrd's"</h1>
     </div>
     <div class="slider-wrapper">
       <section class="main-slider container">
-        <h2 class="hidden">Рекламный слайдер</h2>
+        <h2 class="visually-hidden">Рекламный слайдер</h2>
 
         <ul class="slider__list">
           <li class="slider__item slider__item-long slide slide-current">
@@ -71,15 +71,15 @@
           </li>
         </ul>
         <div class="slider-controls">
-          <button type="button" aria-label="Первый слайд"></button>
-          <button type="button" aria-label="Второй слайд"></button>
-          <button class="current" type="button" aria-label="Третий слайд"></button>
+          <button class="button__slider current" type="button" aria-label="Первый слайд"></button>
+          <button class="button__slider" type="button" aria-label="Второй слайд"></button>
+          <button class="button__slider" type="button" aria-label="Третий слайд"></button>
         </div>
       </section>
     </div>
 
     <section class="services container">
-      <h2 class="hidden">Услуги</h2>
+      <h2 class="visually-hidden">Услуги</h2>
       <ul class="services__list">
         <li class="services__item services__item-site">
           <h3>Веб-сайты</h3>
@@ -106,7 +106,7 @@
 
     <div class="index-columns container">
       <section class="about-us">
-        <h2 class="hidden">О студии</h2>
+        <h2 class="visually-hidden">О студии</h2>
 
         <p class="title">Мы — маленькая, но гордая<br>
           дизайн-студия из Краснодара.</p>
@@ -146,9 +146,8 @@
       </section>
     </div>
 
-
     <section class="customers container">
-      <h2 class="hidden">Наши клиенты</h2>
+      <h2 class="visually-hidden">Наши клиенты</h2>
 
       <ul class="customers__list">
         <li class="customers__item">
@@ -180,7 +179,7 @@
     <section class="contacts__map">
       <div class="container">
         <div class="contacts">
-          <h2 class="hidden">Контакты</h2>
+          <h2 class="visually-hidden">Контакты</h2>
           <p class="title">Nёrds design studio</p>
           <p class="address">наб. Реки Карповки,<br>
             5 лит П, Санкт-Петербург
@@ -189,21 +188,16 @@
           <p>
             <a class="contacts__phone" href="tel:+78005558628">+7 800 555-86-28</a>
           </p>
-          <a class="button" href="#">Напишите нам</a>
+          <button class="button" type="button">Напишите нам</button>
         </div>
       </div>
-
-      <!-- <img class="cantacts__marker" src="img/content/map-marker.png" alt="Маркер адреса на карте" width="231"
-        height="190"> -->
-      <!-- <img src="img/content/map.png"
-        alt="Карта, NЁRDS DESIGN STUDIOнаб. Реки Карповки, 5 лит П, Санкт-Петербург" width="1440" height="416"> -->
     </section>
   </main>
 
   <footer class="main-footer">
     <div class="container">
       <section class="footer-social">
-        <h2 class="hidden">Социальные сети</h2>
+        <h2 class="visually-hidden">Социальные сети</h2>
         <div class="footer-grid">
           <ul class="footer-social__list">
             <li class="footer-social__item">
@@ -227,31 +221,28 @@
     </div>
   </footer>
 
-  <section class="modal container hidden">
-    <h2>Напишите нам</h2>
+  <section class="modal container ">
+    <h2 class="modal__title">Напишите нам</h2>
 
     <form class="write-us__form" action="https://echo.htmlacademy.ru" method="post">
       <p class="write-us__item">
         <label for="write-us-name">Ваше имя:</label>
-        <br>
         <input type="text" name="name" id="write-us-name" placeholder="Имя Фамилия">
       </p>
 
       <p class="write-us__item">
         <label for="write-us-email">Ваш email:</label>
-        <br>
         <input id="write-us-email" type="email" name="email" placeholder="email@example.com">
       </p>
 
       <p class="write-us__item">Текст письма:
-        <br>
         <textarea name="text" id="write-us-text" rows="4">В свободной форме</textarea>
       </p>
 
       <input class="button" type="submit" value="Отправить">
     </form>
 
-    <button class="modal-close" type="button">Закрыть</button>
+    <button class="modal__close" type="button">Закрыть</button>
   </section>
 </body>
 
