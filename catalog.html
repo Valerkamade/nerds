@@ -254,33 +254,29 @@
         </section>
       </div>
     </div>
-      <section class="contacts__map">
-        <div class="container">
-          <div class="contacts">
-            <h2 class="hidden">Контакты</h2>
-            <p class="title">Nёrds design studio</p>
-            <p class="address">наб. Реки Карповки,<br>
-              5 лит П, Санкт-Петербург
-            </p>
 
-            <p>
-              <a class="contacts__phone" href="tel:+78005558628">+7 800 555-86-28</a>
-            </p>
-            <a class="button" href="#">Напишите нам</a>
-          </div>
+    <section class="contacts__map">
+      <div class="container">
+        <div class="contacts">
+          <h2 class="visually-hidden">Контакты</h2>
+          <p class="title">Nёrds design studio</p>
+          <p class="address">наб. Реки Карповки,<br>
+            5 лит П, Санкт-Петербург
+          </p>
+
+          <p>
+            <a class="contacts__phone" href="tel:+78005558628">+7 800 555-86-28</a>
+          </p>
+          <button class="button" type="button">Напишите нам</button>
         </div>
-
-        <!-- <img src="img/content/map-marker.png" alt="Маркер адреса на карте" width="231" height="190">
-        <img src="img/content/map.png" alt="Карта, NЁRDS DESIGN STUDIOнаб. Реки Карповки, 5 лит П, Санкт-Петербург"
-          width="1440" height="416"> -->
-      </section>
-
+      </div>
+    </section>
   </main>
 
   <footer class="main-footer">
     <div class="container">
       <section class="footer-social">
-        <h2>Социальные сети</h2>
+        <h2 class="visually-hidden">Социальные сети</h2>
         <div class="footer-grid">
           <ul class="footer-social__list">
             <li class="footer-social__item">
@@ -304,31 +300,30 @@
     </div>
   </footer>
 
-  <section class="modal container">
-    <h2>Напишите нам</h2>
+  <section class="modal__wrapper container">
+    <div class="modal">
+      <h2 class="modal__title">Напишите нам</h2>
 
-    <form class="write-us__form" action="https://echo.htmlacademy.ru" method="post">
-      <p class="write-us__item">
-        <label for="write-us-name">Ваше имя:</label>
-        <br>
-        <input type="text" name="name" id="write-us-name" placeholder="Имя Фамилия">
-      </p>
+      <form class="write-us__form" action="https://echo.htmlacademy.ru" method="post">
+        <p class="write-us__item">
+          <label for="write-us-name">Ваше имя:</label>
+          <input type="text" name="name" id="write-us-name" placeholder="Имя Фамилия">
+        </p>
 
-      <p class="write-us__item">
-        <label for="write-us-email">Ваш email:</label>
-        <br>
-        <input id="write-us-email" type="email" name="email" placeholder="email@example.com">
-      </p>
+        <p class="write-us__item">
+          <label for="write-us-email">Ваш email:</label>
+          <input id="write-us-email" type="email" name="email" placeholder="email@example.com">
+        </p>
 
-      <p class="write-us__item">Текст письма:
-        <br>
-        <textarea name="text" id="write-us-text" rows="4">В свободной форме</textarea>
-      </p>
+        <p class="write-us__item">Текст письма:
+          <textarea name="text" id="write-us-text" rows="4">В свободной форме</textarea>
+        </p>
 
-      <input class="button" type="submit" value="Отправить">
-    </form>
+        <input class="button" type="submit" value="Отправить">
+      </form>
 
-    <button class="modal-close" type="button">Закрыть</button>
+      <button class="modal__close" type="button">Закрыть</button>
+    </div>
   </section>
 </body>
 

@@ -201,7 +201,7 @@
         <div class="footer-grid">
           <ul class="footer-social__list">
             <li class="footer-social__item">
-              <a class="social-button vk" href="#">Вконтакте</a>
+              <a class="social-button vk" href="#"><span>Вконтакте</span></a>
             </li>
 
             <li class="footer-social__item">
@@ -221,28 +221,30 @@
     </div>
   </footer>
 
-  <section class="modal container ">
-    <h2 class="modal__title">Напишите нам</h2>
+  <section class="modal__wrapper container">
+    <div class="modal">
+      <h2 class="modal__title">Напишите нам</h2>
 
-    <form class="write-us__form" action="https://echo.htmlacademy.ru" method="post">
-      <p class="write-us__item">
-        <label for="write-us-name">Ваше имя:</label>
-        <input type="text" name="name" id="write-us-name" placeholder="Имя Фамилия">
-      </p>
+      <form class="write-us__form" action="https://echo.htmlacademy.ru" method="post">
+        <p class="write-us__item">
+          <label for="write-us-name">Ваше имя:</label>
+          <input type="text" name="name" id="write-us-name" placeholder="Имя Фамилия">
+        </p>
 
-      <p class="write-us__item">
-        <label for="write-us-email">Ваш email:</label>
-        <input id="write-us-email" type="email" name="email" placeholder="email@example.com">
-      </p>
+        <p class="write-us__item">
+          <label for="write-us-email">Ваш email:</label>
+          <input id="write-us-email" type="email" name="email" placeholder="email@example.com">
+        </p>
 
-      <p class="write-us__item">Текст письма:
-        <textarea name="text" id="write-us-text" rows="4">В свободной форме</textarea>
-      </p>
+        <p class="write-us__item">Текст письма:
+          <textarea name="text" id="write-us-text" rows="4">В свободной форме</textarea>
+        </p>
 
-      <input class="button" type="submit" value="Отправить">
-    </form>
+        <input class="button" type="submit" value="Отправить">
+      </form>
 
-    <button class="modal__close" type="button">Закрыть</button>
+      <button class="modal__close" type="button">Закрыть</button>
+    </div>
   </section>
 </body>
 
