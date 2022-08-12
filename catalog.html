@@ -43,7 +43,7 @@
     </div>
     <div class="page-catalog container">
       <section class="filters">
-        <h2 class="hidden">Фильтр дизайнов</h2>
+        <h2 class="visually-hidden">Фильтр дизайнов</h2>
         <form class="filter" method="get" action="https://echo.htmlacademy.ru">
           <fieldset class="filter__price">
             <legend class="filter-title">Стоимость:</legend>
@@ -51,9 +51,6 @@
             <input class="filter__input-price" type="range" name="price-slider-min" id="filter-priceslider-min" min="0"
               max="150000" value="0" data-show-value="true">
             <label for="filter-priceslider-min"></label>
-            <!-- <input type="range" name="fpriceslider-max" id="filter-priceslider-max" min="0" max="150000" value="100000"
-              data-show-value="true">
-            <label for="filter-priceslider-max">Максимальное значение</label> -->
 
             <ul>
               <li>
@@ -71,21 +68,21 @@
             <legend class="filter-title">Сетка:</legend>
             <ul>
               <li class="filter-option filter-radio">
-                <input class="filter__input-radio filter__input" type="radio" name="grid" value="adaptive"
-                  id="filter-adaptive" checked>
+                <input class="filter__input-radio filter__input visually-hidden" type="radio" name="grid"
+                  value="adaptive" id="filter-adaptive" checked>
                 <label for="filter-adaptive">
                   Адаптивная
                 </label>
               </li>
               <li class="filter-option filter-radio">
-                <input class="filter__input-radio filter__input" type="radio" name="grid" value="fixed"
+                <input class="filter__input-radio filter__input visually-hidden" type="radio" name="grid" value="fixed"
                   id="filter-fixed">
                 <label for="filter-fixed">
                   Фиксированная
                 </label>
               </li>
               <li class="filter-option filter-radio">
-                <input class="filter__input-radio filter__input" type="radio" name="grid" value="rubber"
+                <input class="filter__input-radio filter__input visually-hidden" type="radio" name="grid" value="rubber"
                   id="filter-rubber">
                 <label for="filter-rubber">
                   Резиновая
@@ -98,35 +95,36 @@
             <legend class="filter-title">Особенности:</legend>
             <ul>
               <li class="filter-option filter-checkbox">
-                <input class="filter__input-checkbox filter__input" type="checkbox" name="slider" id="filter-slider"
-                  checked>
+                <input class="filter__input-checkbox filter__input visually-hidden" type="checkbox" name="slider"
+                  id="filter-slider" checked>
                 <label for="filter-slider">
                   Слайдер
                 </label>
               </li>
               <li class="filter-option filter-checkbox">
-                <input class="filter__input-checkbox filter__input" type="checkbox" name="benefits"
+                <input class="filter__input-checkbox filter__input visually-hidden" type="checkbox" name="benefits"
                   id="filter-benefits">
                 <label for="filter-benefits">
                   Блок преимуществ
                 </label>
               </li>
               <li class="filter-option filter-checkbox">
-                <input class="filter__input-checkbox filter__input" type="checkbox" name="news" id="filter-news"
-                  checked>
+                <input class="filter__input-checkbox filter__input visually-hidden" type="checkbox" name="news"
+                  id="filter-news" checked>
                 <label for="filter-news">
                   Новости
                 </label>
               </li>
               <li class="filter-option filter-checkbox">
-                <input class="filter__input-checkbox filter__input" type="checkbox" name="malin-goetz"
+                <input class="filter__input-checkbox filter__input visually-hidden" type="checkbox" name="malin-goetz"
                   id="filter-malin-goetz">
                 <label for="filter-malin-goetz">
                   Галерея
                 </label>
               </li>
               <li class="filter-option filter-checkbox">
-                <input class="filter__input-checkbox filter__input" type="checkbox" name="murrays" id="filter-murrays">
+                <input class="filter__input-checkbox filter__input visually-hidden" type="checkbox" name="murrays"
+                  id="filter-murrays">
                 <label for="filter-murrays">
                   Корзина
                 </label>
@@ -139,19 +137,32 @@
 
       <div class="products">
         <section class="sorting">
-          <h2 class="hidden">Сортировка дизайнов</h2>
+          <h2 class="visually-hidden">Сортировка дизайнов</h2>
           <p class="filter-title">Сортировать:</p>
           <ul class="sorting__list">
-            <li><a class="sorting__item" href="#">По цене</a></li>
+            <li><a class="sorting__item" >По цене</a></li>
             <li><a class="sorting__item" href="#">По типу</a></li>
             <li><a class="sorting__item" href="#">По названию</a></li>
-            <li><a class="sorting__item sorting__item-down" href="#">По убыванию</a></li>
-            <li><a class="sorting__item sorting__item-up" href="#">По возрастанию</a></li>
+            <li>
+              <a class="sorting__item sorting__item-arrows" title="По убыванию">
+                <svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M5.5 10L0 0H11" fill="#A6A6A6" />
+                </svg>
+                <span class="visually-hidden">По убыванию</span>
+              </a>
+            </li>
+            <li><a class="sorting__item sorting__item-arrows" href="#" title="По возрастанию">
+                <svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M5.5 0L0 10H11L5.5 0Z" fill="#A6A6A6" />
+                </svg>
+                <span class="visually-hidden">По возрастанию</span>
+              </a>
+            </li>
           </ul>
         </section>
 
         <section class="catalog">
-          <h2 class="hidden">Дизайны</h2>
+          <h2 class="visually-hidden">Дизайны</h2>
 
           <ul class="catalog__list">
             <li class="catalog__item">
@@ -159,7 +170,7 @@
                 <img src="img/products/sedona.png" alt="Sedona" width="358" height="578">
               </p>
 
-              <div class="catalog__item-info hidden">
+              <div class="catalog__item-info visually-hidden">
                 <a href="blank.html">
                   <h3><span class="catalog__item-title">Sedona</span></h3>
                 </a>
@@ -174,7 +185,7 @@
                 <img src="img/products/pink.png" alt="Pink app" width="358" height="578">
               </p>
 
-              <div class="catalog__item-info hidden">
+              <div class="catalog__item-info visually-hidden">
                 <a href="blank.html">
                   <h3><span class="catalog__item-title"></span>Pink app</h3>
                 </a>
@@ -189,7 +200,7 @@
                 <img src="img/products/barbershop.png" alt="Barbershop" width="358" height="578">
               </p>
 
-              <div class="catalog__item-info hidden">
+              <div class="catalog__item-info visually-hidden">
                 <a href="blank.html">
                   <h3><span class="catalog__item-title">Barbershop</span></h3>
                 </a>
@@ -204,7 +215,7 @@
                 <img src="img/products/mishka.png" alt="Mishka" width="358" height="578">
               </p>
 
-              <div class="catalog__item-info hidden">
+              <div class="catalog__item-info visually-hidden">
                 <a href="blank.html">
                   <h3><span class="catalog__item-title">Mishka</span></h3>
                 </a>
@@ -219,7 +230,7 @@
                 <img src="img/products/a-plus.png" alt="A plus" width="358" height="578">
               </p>
 
-              <div class="catalog__item-info hidden">
+              <div class="catalog__item-info visually-hidden">
                 <a href="blank.html">
                   <h3><span class="catalog__item-title">A plus</span></h3>
                 </a>
@@ -234,7 +245,7 @@
                 <img src="img/products/kvast.png" alt="Kvas" width="358" height="578">
               </p>
 
-              <div class="catalog__item-info hidden">
+              <div class="catalog__item-info visually-hidden">
                 <a href="blank.html">
                   <h3><span class="catalog__item-title">Кваст</span></h3>
                 </a>
@@ -280,15 +291,21 @@
         <div class="footer-grid">
           <ul class="footer-social__list">
             <li class="footer-social__item">
-              <a class="social-button vk" href="#">Вконтакте</a>
+              <a class="social-button vk" href="#">
+                <span class="visually-hidden">Вконтакте</span>
+              </a>
             </li>
 
             <li class="footer-social__item">
-              <a class="social-button fb" href="#">Фейсбук</a>
+              <a class="social-button fb" href="#">
+                <span class="visually-hidden">Фейсбук</span>
+              </a>
             </li>
 
             <li class="footer-social__item">
-              <a class="social-button insta" href="#">Инстаграм</a>
+              <a class="social-button insta" href="#">
+                <span class="visually-hidden">Инстаграм</span>
+              </a>
             </li>
           </ul>
           <div class="sale">
@@ -300,7 +317,7 @@
     </div>
   </footer>
 
-  <section class="modal__wrapper container">
+  <section class="modal__wrapper container visually-hidden">
     <div class="modal">
       <h2 class="modal__title">Напишите нам</h2>
 
