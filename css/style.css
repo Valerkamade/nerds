@@ -287,6 +287,7 @@ img {
   margin-bottom: 25px;
   margin-top: 78px;
   color: var(--basic-black);
+  background-color: var(--basic-extra-light);
 }
 
 .slider__item-long {
@@ -313,12 +314,10 @@ img {
 }
 
 .slider-controls {
-  position: absolute;
-  bottom: 96px;
-  left: 536px;
+  padding-bottom: 96px;
   display: flex;
-  width: 88px;
-  justify-content: space-between;
+  gap: 17px;
+  justify-content: center
 }
 
 .slider-controls button {
@@ -872,11 +871,11 @@ h4 {
 .filter__input-checkbox:hover+label::before,
 .filter__input-checkbox:hover+label::after,
 .filter__input-checkbox:focus {
-  opacity: 100%;
+  opacity: 1;
 }
 
 .filter__input-checkbox:focus {
-  opacity: 100%;
+  opacity: 1;
 }
 
 .filter__input-radio+label::before {
@@ -964,12 +963,6 @@ h4 {
   column-gap: 25px;
   margin: 0;
   padding: 0;
-}
-
-.sorting-wrapper {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
 }
 
 .sorting__item label {
