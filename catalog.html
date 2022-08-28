@@ -19,7 +19,7 @@
   <header class="main-header">
     <nav class="main-navigation">
       <div class="main-navigation-wrapper">
-        <a class="main-header__logo" href="/">
+        <a class="main-header__logo" href="index.html">
           <img src="img/logo/nerds.svg" alt="Логотип nёrd's" width="160" height="65">
         </a>
 
@@ -53,8 +53,8 @@
                 <div class="scale">
                   <div class="bar" style="
                   width: 30%;
-                  margin-left: 20%
-                "></div>
+                  margin-left: 20%">
+                  </div>
                 </div>
 
                 <div class="toggle toggle-min" tabindex="0" style="
@@ -149,64 +149,63 @@
         <section class=" products">
           <h2 class="visually-hidden">Сортировка дизайнов</h2>
           <p class="filter-title">Сортировать:</p>
-          <div class="sorting-wrapper">
-            <fieldset class="sorting">
-              <legend class="filter-title visually-hidden">Сортировать:</legend>
-              <ul class="sorting__list">
-                <li class="sorting__item">
-                  <input class="sorting__input-radio sorting__input visually-hidden" type="radio" name="sorting"
-                    value="prise" id="sorting-price" checked>
-                  <label for="sorting-price">
-                    По цене
-                  </label>
-                </li>
+          <fieldset class="sorting">
+            <legend class="filter-title visually-hidden">Сортировать:</legend>
+            <ul class="sorting__list">
+              <li class="sorting__item">
+                <input class="sorting__input-radio sorting__input visually-hidden" type="radio" name="sorting"
+                  value="prise" id="sorting-price" checked>
+                <label for="sorting-price">
+                  По цене
+                </label>
+              </li>
 
-                <li class="sorting__item">
-                  <input class="sorting__input-radio sorting__input visually-hidden" type="radio" name="sorting"
-                    value="type" id="sorting-type">
-                  <label for="sorting-type">
-                    По типу
-                  </label>
-                </li>
+              <li class="sorting__item">
+                <input class="sorting__input-radio sorting__input visually-hidden" type="radio" name="sorting"
+                  value="type" id="sorting-type">
+                <label for="sorting-type">
+                  По типу
+                </label>
+              </li>
 
-                <li class="sorting__item">
-                  <input class="sorting__input-radio sorting__input visually-hidden" type="radio" name="sorting"
-                    value="name" id="sorting-name">
-                  <label for="sorting-name">
-                    По названию
-                  </label>
-                </li>
-              </ul>
-            </fieldset>
+              <li class="sorting__item">
+                <input class="sorting__input-radio sorting__input visually-hidden" type="radio" name="sorting"
+                  value="name" id="sorting-name">
+                <label for="sorting-name">
+                  По названию
+                </label>
+              </li>
+            </ul>
+          </fieldset>
 
-            <fieldset class="rating">
-              <legend class="filter-title visually-hidden">Рейтинг:</legend>
-              <ul class="rating__list">
-                <li class="rating__item">
-                  <input class="rating__input-radio rating__input visually-hidden" type="radio" name="rating"
-                    value="down" id="rating-down" checked>
-                  <label for="rating-down">
-                    <svg width="11" height="10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M5.5 10L0 0H11" fill="#000" />
-                    </svg>
-                    <span class="visually-hidden">По убыванию</span>
-                  </label>
-                </li>
+          <fieldset class="rating">
+            <legend class="filter-title visually-hidden">Рейтинг:</legend>
+            <ul class="rating__list">
+              <li class="rating__item">
+                <input class="rating__input-radio rating__input visually-hidden" type="radio" name="rating" value="down"
+                  id="rating-down" checked>
+                <label for="rating-down">
+                  <svg width="11" height="10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M5.5 10L0 0H11" fill="#000" />
+                  </svg>
+                  <span class="visually-hidden">По убыванию</span>
+                </label>
+              </li>
 
-                <li class="rating__item">
-                  <input class="rating__input-radio rating__input visually-hidden" type="radio" name="rating"
-                    value="up" id="rating-up" >
-                  <label for="rating-up">
-                    <svg width="11" height="10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M5.5 0L0 10H11L5.5 0Z" fill="#000" />
-                    </svg>
-                    <span class="visually-hidden">По возрастанию</span>
-                  </label>
-                </li>
-              </ul>
-            </fieldset>
+              <li class="rating__item">
+                <input class="rating__input-radio rating__input visually-hidden" type="radio" name="rating" value="up"
+                  id="rating-up">
+                <label for="rating-up">
+                  <svg width="11" height="10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M5.5 0L0 10H11L5.5 0Z" fill="#000" />
+                  </svg>
+                  <span class="visually-hidden">По возрастанию</span>
+                </label>
+              </li>
+            </ul>
+          </fieldset>
 
-            <!-- <ul class="sorting__list">
+          <!-- <ul class="sorting__list">
             <li><a class="sorting__item">По цене</a></li>
             <li><a class="sorting__item" href="#">По типу</a></li>
             <li><a class="sorting__item" href="#">По названию</a></li>
@@ -226,7 +225,6 @@
               </a>
             </li>
           </ul> -->
-          </div>
         </section>
 
         <section class="catalog">
@@ -335,9 +333,16 @@
     </div>
 
     <section class="contacts__map">
+      <iframe class="map"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d998.4166170988865!2d30.315889674798708!3d59.96808972778494!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696314db404b36b%3A0x1d934f1978240bba!2zTtGRcmRz!5e0!3m2!1sru!2sru!4v1661715711948!5m2!1sru!2sru"
+        style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" width="100%"
+        height="416" title="наб. Реки Карповки,
+    5 лит П, Санкт-Петербург"></iframe>
       <div class="container">
+
         <div class="contacts">
           <h2 class="visually-hidden">Контакты</h2>
+
           <p class="title">Nёrds design studio</p>
           <p class="address">наб. Реки Карповки,<br>
             5 лит П, Санкт-Петербург
@@ -385,7 +390,7 @@
     </div>
   </footer>
 
-  <section class="modal__wrapper container">
+  <section class="modal__wrapper container visually-hidden">
     <div class="modal">
       <h2 class="modal__title">Напишите нам</h2>
 

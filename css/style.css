@@ -4,7 +4,6 @@
 *::before,
 *::after {
   box-sizing: border-box;
-  -moz-box-sizing: border-box;
 } */
 
 :root {
@@ -112,6 +111,7 @@ img {
 /* Main navigation */
 
 .main-navigation {
+  height: 66px;
   font-size: 16px;
   line-height: 30px;
   color: var(--basic-black);
@@ -145,11 +145,16 @@ img {
   list-style: none;
   margin: 0;
   padding: 0;
-  padding-bottom: 13px;
+  /* padding-bottom: 13px; */
   column-gap: 45px;
   row-gap: 25px;
   justify-content: center;
-  align-items: flex-end;
+  align-items: center;
+  padding-top: 5px;
+}
+
+.site-navigation li {
+  position: relative;
 }
 
 .user-navigation {
@@ -157,9 +162,9 @@ img {
   list-style: none;
   margin: 0;
   padding: 0;
-  padding-bottom: 13px;
   justify-content: flex-end;
-  align-items: flex-end;
+  align-items: center;
+  padding-top: 5px;
 }
 
 .user-navigation .basket-link {
@@ -205,10 +210,14 @@ img {
   color: var(--black-30);
 }
 
-.active-page {
+.active-page::before {
+  content: "";
+  position: absolute;
   color: var(--basic-black);
-  padding-bottom: 13px;
-  border-bottom: 2px solid var(--accent-red);
+  bottom: -15px;
+  height: 2px;
+  width: 100%;
+  background-color: var(--accent-red);
 }
 
 .user-navigation a:not([href]) {
@@ -249,10 +258,11 @@ img {
 
 .slider-wrapper {
   background-color: var(--basic-extra-light);
+  height: 431px;
+  margin-bottom: 80px;
 }
 
 .main-slider {
-  margin-bottom: 80px;
   display: grid;
   position: relative;
 }
@@ -268,7 +278,6 @@ img {
   flex-direction: column;
   background-repeat: no-repeat;
   background-color: var(--basic-extra-light);
-  min-height: 431px;
   align-items: flex-start;
   /* padding-right: 400px; */
   /* width: 760px; */
@@ -287,7 +296,6 @@ img {
   margin-bottom: 25px;
   margin-top: 78px;
   color: var(--basic-black);
-  background-color: var(--basic-extra-light);
 }
 
 .slider__item-long {
@@ -314,10 +322,9 @@ img {
 }
 
 .slider-controls {
-  padding-bottom: 96px;
   display: flex;
   gap: 17px;
-  justify-content: center
+  justify-content: center;
 }
 
 .slider-controls button {
@@ -329,6 +336,7 @@ img {
   border-radius: 50%;
   border: none;
   cursor: pointer;
+  bottom: 114px;
 }
 
 .current::before {
@@ -608,7 +616,7 @@ h4 {
 }
 
 .customers__item a {
-  height: 184px;
+  height: 180px;
   display: flex;
   opacity: 20%;
 }
@@ -628,8 +636,11 @@ h4 {
 
 /* Contacts */
 
+
 .contacts__map .container {
   padding-top: 54px;
+  padding-bottom: 54px;
+  margin-bottom: 68px;
 }
 
 .contacts {
@@ -641,7 +652,7 @@ h4 {
   justify-content: center;
   max-width: 220px;
   background-color: var(--basic-white);
-  /* margin: 0; */
+  box-shadow: 0px 20px 40px var(--shadow-dark);
 }
 
 .contacts p {
@@ -671,11 +682,18 @@ h4 {
   margin-top: 37px;
 }
 
-.contacts__map {
+.map {
   background: url("../img/content/map.png") 50% 50% no-repeat;
   height: 416px;
   width: 100%;
-  margin-bottom: 58px;
+
+}
+
+.map {
+  position: absolute;
+  display: block;
+z-index: -1;
+
 }
 
 /* .cantacts__marker {
@@ -708,17 +726,13 @@ h4 {
 .filter fieldset {
   padding: 0;
   margin: 0;
-  margin-bottom: 43px;
+  margin-bottom: 49px;
   border: none;
-}
-
-.filter__price {
-  margin-bottom: 54px;
 }
 
 .range-filter {
   width: 260px;
-  margin-top: 49px;
+  margin-top: 31px;
 }
 
 .range-controls {
@@ -934,18 +948,12 @@ h4 {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  margin-bottom: 16px;
-}
-
-.sorting-wrapper {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  column-gap: 47px;
+  margin-bottom: 32px;
 }
 
 .products .filter-title {
   margin: 0;
+  margin-right: auto;
 }
 
 .products fieldset {
@@ -992,6 +1000,7 @@ h4 {
   column-gap: 18px;
   margin: 0;
   padding: 0;
+  margin-left: 47px;
 }
 
 .rating__item {
@@ -1008,7 +1017,7 @@ h4 {
   cursor: pointer;
 }
 
-.rating__item:hover path{
+.rating__item:hover path {
   fill: var(--grey);
 }
 
@@ -1125,6 +1134,7 @@ h4 {
   filter: drop-shadow(0px 6px 15px var(--shadow-light));
 
 }
+
 .catalog__item:hover p {
   border: none;
   width: 360px;
@@ -1143,7 +1153,7 @@ h4 {
   flex-wrap: wrap;
   margin: 0;
   padding: 0;
-  margin-bottom: 60px;
+  margin-bottom: 28px;
   gap: 11px;
 }
 
@@ -1192,7 +1202,7 @@ h4 {
   list-style: none;
   display: grid;
   grid-template-columns: 81px 81px 81px;
-  column-gap: 9px;
+  gap: 9px;
   margin: 0;
   padding: 0;
 }
@@ -1277,16 +1287,18 @@ h4 {
 /* Write-us */
 
 .modal__wrapper {
-  position: relative;
-  display: flex;
-  justify-content: center;
+  position:fixed;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
 }
 
 .modal {
-  position: absolute;
+  position: relative;
   max-width: 960px;
-  max-height: 590px;
-  padding: 63px 99px 84px 100px;
+  min-height: 590px;
+  padding: 52px 99px 84px 100px;
   margin: 0 auto;
   box-sizing: border-box;
   box-shadow: 0px 20px 40px var(--shadow-dark);
@@ -1326,7 +1338,7 @@ h4 {
 
 .write-us__item textarea {
   width: 760px;
-  max-height: 118px;
+  min-height: 118px;
   font: inherit;
   color: var(--grey-input-50);
   border: 2px solid var(--basic-light);
@@ -1335,7 +1347,8 @@ h4 {
   font-weight: 400;
   margin-top: 9px;
   margin-bottom: 47px;
-  padding: 16px;
+  padding-top: 15px;
+  padding-left: 15px;
   resize: none;
 }
 
@@ -1350,9 +1363,13 @@ h4 {
   width: 360px;
   box-sizing: border-box;
   font-weight: 400;
-  padding: 16px;
+  padding: 15px 13px;
   margin-bottom: 34px;
   margin-top: 9px;
+}
+
+.button-write-us {
+  padding: 17px 83px 15px 83px;
 }
 
 .write-us__item input:hover {
@@ -1408,3 +1425,5 @@ h4 {
 .modal__close:active::before {
   opacity: 0.1;
 }
+
+/* Сделать минимизированные css и js. Исправить фильтр с кнопок на ссылки */
