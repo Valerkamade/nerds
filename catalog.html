@@ -146,10 +146,10 @@
       </section>
 
       <div class="products">
-        <section class=" products">
+        <section class=" product">
           <h2 class="visually-hidden">Сортировка дизайнов</h2>
           <p class="filter-title">Сортировать:</p>
-          <fieldset class="sorting">
+          <!-- <fieldset class="sorting">
             <legend class="filter-title visually-hidden">Сортировать:</legend>
             <ul class="sorting__list">
               <li class="sorting__item">
@@ -176,9 +176,9 @@
                 </label>
               </li>
             </ul>
-          </fieldset>
+          </fieldset> -->
 
-          <fieldset class="rating">
+          <!-- <fieldset class="rating">
             <legend class="filter-title visually-hidden">Рейтинг:</legend>
             <ul class="rating__list">
               <li class="rating__item">
@@ -203,130 +203,142 @@
                 </label>
               </li>
             </ul>
-          </fieldset>
+          </fieldset> -->
 
-          <!-- <ul class="sorting__list">
+          <ul class="sorting__list">
             <li><a class="sorting__item">По цене</a></li>
             <li><a class="sorting__item" href="#">По типу</a></li>
             <li><a class="sorting__item" href="#">По названию</a></li>
+          </ul>
+          <ul class="rating__list">
             <li>
-              <a class="sorting__item sorting__item-arrows" title="По убыванию">
+              <a class="rating__item rating__item-arrows" title="По убыванию">
                 <svg width="11" height="10" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M5.5 10L0 0H11" fill="#A6A6A6" />
                 </svg>
                 <span class="visually-hidden">По убыванию</span>
               </a>
             </li>
-            <li><a class="sorting__item sorting__item-arrows" href="#" title="По возрастанию">
+            <li><a class="rating__item rating__item-arrows" href="#" title="По возрастанию">
                 <svg width="11" height="10" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M5.5 0L0 10H11L5.5 0Z" fill="#A6A6A6" />
                 </svg>
                 <span class="visually-hidden">По возрастанию</span>
               </a>
             </li>
-          </ul> -->
+          </ul>
         </section>
 
         <section class="catalog">
           <h2 class="visually-hidden">Дизайны</h2>
 
           <ul class="catalog__list">
-            <li class="catalog__item">
+            <li class="catalog__item" tabindex="0">
+
               <p class="catalog__item-image">
                 <img src="img/products/sedona.png" alt="Sedona" width="360" height="580">
               </p>
 
-              <div class="catalog__item-info visually-hidden">
+              <div class="catalog__item-info">
                 <a href="blank.html">
                   <h3><span class="catalog__item-title">Sedona</span></h3>
                 </a>
-                Информационный сайт<br>
-                для туристов
-                <button class="button button-catalog" type="button">9 900 ₽</button>
+
+                <p class="catalog__item-info-disc">
+                  Информационный сайт для&#160;туристов
+                </p>
+
+                <a class="button button-catalog" href="#">9 900 ₽</a>
               </div>
+
             </li>
 
-            <li class="catalog__item">
+            <li class="catalog__item" tabindex="0">
               <p class="catalog__item-image">
                 <img src="img/products/pink.png" alt="Pink app" width="360" height="580">
               </p>
 
-              <div class="catalog__item-info visually-hidden">
+              <div class="catalog__item-info">
                 <a href="blank.html">
                   <h3><span class="catalog__item-title"></span>Pink app</h3>
                 </a>
-                Продуктовый лендинг<br>
-                приложения для iOS и Android
-                <button class="button button-catalog" type="button">9 900 ₽</button>
+                <p class="catalog__item-info-disc">
+                  Продуктовый лендинг приложения для iOS и Android
+                </p>
+                <a class="button button-catalog" href="#">9 900 ₽</a>
               </div>
             </li>
 
-            <li class="catalog__item">
+            <li class="catalog__item" tabindex="0">
               <p class="catalog__item-image">
                 <img src="img/products/barbershop.png" alt="Barbershop" width="360" height="580">
               </p>
 
-              <div class="catalog__item-info visually-hidden">
+              <div class="catalog__item-info">
                 <a href="blank.html">
                   <h3><span class="catalog__item-title">Barbershop</span></h3>
                 </a>
-                Сайт салона красоты.<br>
-                Для мужчин, да.
-                <button class="button button-catalog" type="button">9 900 ₽</button>
+                <p class="catalog__item-info-disc">
+                  Сайт салона красоты. Для&#160;мужчин, да.
+                </p>
+                <a class="button button-catalog" href="#">9 900 ₽</a>
               </div>
             </li>
 
-            <li class="catalog__item">
+            <li class="catalog__item" tabindex="0">
               <p class="catalog__item-image">
                 <img src="img/products/mishka.png" alt="Mishka" width="360" height="580">
               </p>
 
-              <div class="catalog__item-info visually-hidden">
+              <div class="catalog__item-info">
                 <a href="blank.html">
                   <h3><span class="catalog__item-title">Mishka</span></h3>
                 </a>
-                Интернет-магазин<br>
-                вязаных игрушек
+                <p class="catalog__item-info-disc">
+                  Интернет-магазин вязаных&#160;игрушек
+                </p>
                 <button class="button button-catalog" type="button">9 900 ₽</button>
               </div>
             </li>
 
-            <li class="catalog__item">
+            <li class="catalog__item" tabindex="0">
               <p class="catalog__item-image">
                 <img src="img/products/a-plus.png" alt="A plus" width="360" height="580">
               </p>
 
-              <div class="catalog__item-info visually-hidden">
+              <div class="catalog__item-info">
                 <a href="blank.html">
                   <h3><span class="catalog__item-title">A plus</span></h3>
                 </a>
-                Лендинг курсов повышения<br>
-                квалификации
-                <button class="button button-catalog" type="button">9 900 ₽</button>
+                <p class="catalog__item-info-disc">
+                  Лендинг курсов повышения квалификации
+                </p>
+                <a class="button button-catalog" type="button">9 900 ₽</a>
               </div>
             </li>
 
-            <li class="catalog__item">
+            <li class="catalog__item" tabindex="0">
               <p class="catalog__item-image">
                 <img src="img/products/kvast.png" alt="Kvas" width="360" height="580">
               </p>
 
-              <div class="catalog__item-info visually-hidden">
+              <div class="catalog__item-info">
                 <a href="blank.html">
                   <h3><span class="catalog__item-title">Кваст</span></h3>
                 </a>
-                Промо-сайт производителя<br>
-                крафтового кваса
-                <button class="button button-catalog" type="button">9 900 ₽</button>
+                <p class="catalog__item-info-disc">
+                  Промо-сайт производителя крафтового кваса
+                </p>
+                <a class="button button-catalog" type="button">9 900 ₽</a>
               </div>
             </li>
           </ul>
 
           <ul class="pagination__list">
-            <li class="pagination__item pagination__item-current"><a>1</a> </li>
-            <li class="pagination__item"><a href="#">2</a></li>
-            <li class="pagination__item"><a href="#">3</a></li>
-            <li class="pagination__item next"><a href="#">Следующая</a></li>
+            <li class="pagination__item pagination__item-current"><a aria-label="Первая страница">1</a> </li>
+            <li class="pagination__item"><a href="#" aria-label="Вторая страница">2</a></li>
+            <li class="pagination__item"><a href="#" aria-label="Третья страница">3</a></li>
+            <li class="pagination__item next"><a href="#" aria-label="Следующая страница">Следующая</a></li>
           </ul>
         </section>
       </div>
@@ -364,21 +376,15 @@
         <div class="footer-grid">
           <ul class="footer-social__list">
             <li class="footer-social__item">
-              <a class="social-button vk" href="#">
-                <span class="visually-hidden">Вконтакте</span>
-              </a>
+              <a class="social-button vk" href="#" aria-label="Вконтакте"></a>
             </li>
 
             <li class="footer-social__item">
-              <a class="social-button fb" href="#">
-                <span class="visually-hidden">Фейсбук</span>
-              </a>
+              <a class="social-button fb" href="#" aria-label="Фейсбук"></a>
             </li>
 
             <li class="footer-social__item">
-              <a class="social-button insta" href="#">
-                <span class="visually-hidden">Инстаграм</span>
-              </a>
+              <a class="social-button insta" href="#" aria-label="Инстаграм"></a>
             </li>
           </ul>
           <div class="sale">
@@ -412,7 +418,7 @@
         <input class="button" type="submit" value="Отправить">
       </form>
 
-      <button class="modal__close" type="button">Закрыть</button>
+      <button class="modal__close" type="button" aria-label="Закрыть"></button>
     </div>
   </section>
 </body>
