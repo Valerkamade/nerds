@@ -636,14 +636,16 @@ h4 {
 
 /* Contacts */
 
-
-.contacts__map .container {
-  padding-top: 54px;
-  padding-bottom: 54px;
+.contacts__map {
+  position: relative;
   margin-bottom: 68px;
 }
 
 .contacts {
+  position: absolute;
+  padding-top: 54px;
+  padding-bottom: 54px;
+  top: 54px;
   display: flex;
   color: var(--basic-grey);
   flex-direction: column;
@@ -686,14 +688,12 @@ h4 {
   background: url("../img/content/map.png") 50% 50% no-repeat;
   height: 416px;
   width: 100%;
-
 }
 
 .map {
-  position: absolute;
+  /* position: absolute; */
   display: block;
-  z-index: -1;
-
+  z-index: 0;
 }
 
 /* .cantacts__marker {
@@ -852,7 +852,7 @@ h4 {
   padding-left: 36px;
 }
 
-.filter__input-checkbox+label::before {
+.filter__input-checkbox + label::before {
   content: "";
   position: absolute;
   left: 0;
@@ -865,11 +865,11 @@ h4 {
   box-sizing: border-box;
 }
 
-.filter__input-checkbox:checked+label::before {
+.filter__input-checkbox:checked + label::before {
   display: none;
 }
 
-.filter__input-checkbox:checked+label::after {
+.filter__input-checkbox:checked + label::after {
   content: "";
   position: absolute;
   top: -3px;
@@ -882,10 +882,10 @@ h4 {
   opacity: 0.4;
 }
 
-.filter__input-checkbox:hover+label::before,
-.filter__input-checkbox:hover+label::after,
-.filter__input-checkbox:focus+label::before,
-.filter__input-checkbox:focus+label::after {
+.filter__input-checkbox:hover + label::before,
+.filter__input-checkbox:hover + label::after,
+.filter__input-checkbox:focus + label::before,
+.filter__input-checkbox:focus + label::after {
   opacity: 1;
 }
 
@@ -893,7 +893,7 @@ h4 {
   opacity: 1;
 }
 
-.filter__input-radio+label::before {
+.filter__input-radio + label::before {
   content: "";
   position: absolute;
   left: 0;
@@ -905,7 +905,7 @@ h4 {
   border-radius: 50%;
 }
 
-.filter__input-radio:checked+label::after {
+.filter__input-radio:checked + label::after {
   content: "";
   position: absolute;
   top: 5px;
@@ -917,10 +917,10 @@ h4 {
   border-radius: 50%;
 }
 
-.filter__input-radio:hover+label::before,
-.filter__input-radio:hover+label::after,
-.filter__input-radio:focus+label::before,
-.filter__input-radio:focus+label::after {
+.filter__input-radio:hover + label::before,
+.filter__input-radio:hover + label::after,
+.filter__input-radio:focus + label::before,
+.filter__input-radio:focus + label::after {
   opacity: 100%;
 }
 
@@ -1000,7 +1000,6 @@ h4 {
   margin-left: 47px;
 }
 
-
 .rating__item path {
   opacity: 0.2;
 }
@@ -1010,10 +1009,8 @@ h4 {
   opacity: 1;
 }
 
-
 .rating__item[href]:hover path {
   opacity: 1;
-
 }
 
 .rating__item[href]:focus path,
@@ -1159,7 +1156,7 @@ h4 {
   border-bottom-right-radius: 5px;
   border: 1px solid var(--black-10);
   clip-path: inset(1 1 0 round 0 0 5px 5px);
-  background-color: #F2F2F2;
+  background-color: #f2f2f2;
   width: 360px;
   height: 580px;
   box-sizing: border-box;
@@ -1383,24 +1380,32 @@ h4 {
 
 /* Write-us */
 
-.modal__wrapper {
+.modal {
   position: fixed;
+  top: 0;
   right: 0;
   bottom: 0;
   left: 0;
-  margin: auto;
-}
-
-.modal {
-  position: relative;
-  max-width: 960px;
-  min-height: 590px;
-  padding: 52px 99px 84px 100px;
-  margin: 0 auto;
+  display: none;
   box-sizing: border-box;
   box-shadow: 0px 20px 40px var(--shadow-dark);
-  bottom: 169px;
   background-color: var(--basic-white);
+}
+
+.modal-show {
+  display: block;
+  animation-name: bounce;
+  animation-duration: 0.6s;
+}
+
+.modal-error {
+  animation-name: shake;
+  animation-duration: 0.6s;
+}
+.modal-exit {
+  animation-name: reverse;
+  animation-duration: 0.6s;
+  animation-fill-mode: forwards;
 }
 
 .modal__title {
@@ -1411,6 +1416,15 @@ h4 {
   padding: 0;
   color: var(--basic-black);
   margin-bottom: 37px;
+}
+
+.modal__wrie-us {
+  max-width: 960px;
+  min-height: 590px;
+  padding: 52px 99px 84px 100px;
+  margin: 0 auto;
+  bottom: 169px;
+  top: auto;
 }
 
 .write-us__form {
@@ -1437,7 +1451,7 @@ h4 {
   width: 760px;
   min-height: 118px;
   font: inherit;
-  color: var(--grey-input-50);
+  color: var(--basic-dark);
   border: 2px solid var(--basic-light);
   border-radius: 3px;
   box-sizing: border-box;
@@ -1449,7 +1463,8 @@ h4 {
   resize: none;
 }
 
-.write-us__item input::placeholder {
+.write-us__item input::placeholder,
+.write-us__item textarea::placeholder {
   color: var(--grey-input-50);
 }
 
@@ -1476,7 +1491,7 @@ h4 {
 .write-us__item input:focus::placeholder,
 .write-us__item input:active::placeholder {
   border-color: var(--basic-black);
-  color: var(--basic-dark);
+  color: var(--grey-input);
 }
 
 .write-us__item textarea:hover {
@@ -1487,16 +1502,6 @@ h4 {
 .write-us__item textarea:active {
   border-color: var(--basic-black);
   color: var(--basic-dark);
-}
-
-.write-us__form .modal-close {
-  background: var(--accent-red) url("../img/icon/close-cross.svg") 50% 50% no-repit;
-  opacity: 30%;
-}
-
-.modal__close {
-  position: absolute;
-
 }
 
 .modal__close {
@@ -1523,3 +1528,63 @@ h4 {
 }
 
 /* Сделать минимизированные css и js.*/
+
+/* Animations */
+
+@keyframes bounce {
+  0% {
+    transform: translateY(-2000px);
+  }
+
+  70% {
+    transform: translateY(30px);
+  }
+
+  90% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes reverse {
+  0% {
+    transform: translateY(0);
+  }
+
+  10% {
+    transform: translateY(-10px);
+  }
+
+  30% {
+    transform: translateY(30px);
+  }
+
+  100% {
+    transform: translateY(-2000px);
+  }
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-10px);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(10px);
+  }
+}

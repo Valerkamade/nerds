@@ -363,7 +363,7 @@
           <p>
             <a class="contacts__phone" href="tel:+78005558628">+7 800 555-86-28</a>
           </p>
-          <button class="button" type="button">Напишите нам</button>
+          <button class="button button__modal" type="button">Напишите нам</button>
         </div>
       </div>
     </section>
@@ -396,31 +396,52 @@
     </div>
   </footer>
 
-  <section class="modal__wrapper container visually-hidden">
-    <div class="modal">
-      <h2 class="modal__title">Напишите нам</h2>
+  <section class="modal modal__wrie-us">
+    <h2 class="modal__title">Напишите нам</h2>
 
-      <form class="write-us__form" action="https://echo.htmlacademy.ru" method="post">
-        <p class="write-us__item">
-          <label for="write-us-name">Ваше имя:</label>
-          <input type="text" name="name" id="write-us-name" placeholder="Имя Фамилия">
-        </p>
+    <form
+      class="write-us__form"
+      action="https://echo.htmlacademy.ru"
+      method="post"
+    >
+      <p class="write-us__item">
+        <label for="write-us-name">Ваше имя:</label>
+        <input
+          type="text"
+          name="name"
+          id="write-us-name"
+          placeholder="Имя Фамилия"
+        />
+      </p>
 
-        <p class="write-us__item">
-          <label for="write-us-email">Ваш email:</label>
-          <input id="write-us-email" type="email" name="email" placeholder="email@example.com">
-        </p>
+      <p class="write-us__item">
+        <label for="write-us-email">Ваш email:</label>
+        <input
+          type="email"
+          name="email"
+          id="write-us-email"
+          placeholder="email@example.com"
+        />
+      </p>
 
-        <p class="write-us__item">Текст письма:
-          <textarea name="text" id="write-us-text" rows="4">В свободной форме</textarea>
-        </p>
+      <p class="write-us__item">
+        Текст письма:
+        <textarea
+          name="text"
+          id="write-us-text"
+          rows="4"
+          placeholder="В свободной форме"
+        ></textarea>
+      </p>
 
-        <input class="button" type="submit" value="Отправить">
-      </form>
+      <input class="button button-write-us" type="submit" value="Отправить" />
+    </form>
 
-      <button class="modal__close" type="button" aria-label="Закрыть"></button>
-    </div>
+    <button class="modal__close" type="button" aria-label="Закрыть"></button>
   </section>
+
+  <script src="js/slider.js"></script>
+  <script src="js/modal.js"></script>
 </body>
 
 </html>
