@@ -1,69 +1,85 @@
-const modal = document.querySelector('.modal');
+const modal = document.querySelector('.modal__wrie-us');
 const writeUs = document.querySelector('.button__modal');
 const modalClose = modal.querySelector('.modal__close');
-const writeUsForm = modal.querySelector(".write-us__form");
-const writeUsName = modal.querySelector("[name=name]");
-const writeUsEmail = modal.querySelector("[name=email]");
-const writeUsText = modal.querySelector("[name=text]");
+const writeUsForm = modal.querySelector('.write-us__form');
+const writeUsName = modal.querySelector('[name=ns]');
+const writeUsEmail = modal.querySelector('[name=email]');
+const writeUsText = modal.querySelector('[name=text]');
+
+
+	
+
 
 let isStorageSupport = true;
-let storage = "";
+let storage = '';
 
 try {
-  storage = localStorage.getItem("writeUsName");
+  storage = localStorage.getItem('ns');
 } catch (err) {
   isStorageSupport = false;
 }
 
-writeUs.addEventListener("click", function (evt) {
+writeUs.addEventListener('click', function open(evt) {
   evt.preventDefault();
-  modal.classList.add("modal-show");
+  modal.classList.add('modal-show');
 
-  // условие  не работает
+  if (localStorage.getItem('email') && localStorage.getItem('ns')) {
+    writeUsName.value = localStorage.getItem('ns');
+    writeUsEmail.value = localStorage.getItem('email');
+    writeUsText.focus();
 
-  if (storage) {
-    writeUsName.value = storage;
+  } else if (localStorage.getItem('ns')) {
+    writeUsName.value = localStorage.getItem('ns');
     writeUsEmail.focus();
+
   } else {
     writeUsName.focus();
-    console.log(writeUsName.value);
   }
 });
+
 
 const cleen = function () {
-  modal.classList.remove("modal-show");
-  modal.classList.remove("modal-error");
-  modal.classList.remove("modal-exit");
+  modal.classList.remove('modal-show');
+  modal.classList.remove('modal-error');
+  modal.classList.remove('modal-exit');
 }
 
-modalClose.addEventListener("click", function (evt) {
+const isStorage = function () {
+  if (isStorageSupport) {
+    localStorage.setItem('ns', writeUsName.value);
+    localStorage.setItem('email', writeUsEmail.value);
+    localStorage.setItem('text', writeUsText.value);
+  }
+}
+
+modalClose.addEventListener('click', function (evt) {
   evt.preventDefault();
-  modal.classList.add("modal-exit");
+  modal.classList.add('modal-exit');
 
   setTimeout(cleen, 600);
-
+  isStorage();
 });
 
-writeUsForm.addEventListener("submit", function (evt) {
-  if (!writeUsName.value || !writeUsEmail.value) {
+writeUsForm.addEventListener('submit', function (evt) {
+  if (!writeUsName.value || !writeUsEmail.value || !writeUsText.value) {
     evt.preventDefault();
-    modal.classList.remove("modal-error");
+    modal.classList.remove('modal-error');
     modal.offsetWidth = modal.offsetWidth;
-    modal.classList.add("modal-error");
+    modal.classList.add('modal-error');
   } else {
-    if (isStorageSupport) {
-      localStorage.setItem("name", writeUsName.value);
-    }
+    isStorage();
   }
-});
+}
+);
 
-window.addEventListener("keydown", function (evt) {
+window.addEventListener('keydown', function (evt) {
   if (evt.keyCode === 27) {
-    if (modal.classList.contains("modal-show")) {
+    if (modal.classList.contains('modal-show')) {
       evt.preventDefault();
-      modal.classList.add("modal-exit");
+      modal.classList.add('modal-exit');
 
       setTimeout(cleen, 600);
+      isStorage();
     }
   }
 });

@@ -279,8 +279,10 @@ img {
   background-repeat: no-repeat;
   background-color: var(--basic-extra-light);
   align-items: flex-start;
-  /* padding-right: 400px; */
-  /* width: 760px; */
+  height: 431px;
+  margin: 0;
+  padding: 0;
+  margin-right: 3px;
 }
 
 .slider__item p {
