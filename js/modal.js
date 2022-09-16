@@ -6,10 +6,6 @@ const writeUsName = modal.querySelector('[name=ns]');
 const writeUsEmail = modal.querySelector('[name=email]');
 const writeUsText = modal.querySelector('[name=text]');
 
-
-	
-
-
 let isStorageSupport = true;
 let storage = '';
 
@@ -36,7 +32,6 @@ writeUs.addEventListener('click', function open(evt) {
     writeUsName.focus();
   }
 });
-
 
 const cleen = function () {
   modal.classList.remove('modal-show');
